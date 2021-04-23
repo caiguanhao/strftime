@@ -2,8 +2,8 @@
 // Use of this source code is governed by an MIT-style
 // license that can be found in the LICENSE file.
 
-// Package gostrftime formats time.Time using strftime(3) conventions.
-package gostrftime
+// Package strftime formats time.Time using strftime(3) conventions.
+package strftime
 
 import (
 	"bytes"

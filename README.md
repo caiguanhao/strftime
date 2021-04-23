@@ -1,22 +1,24 @@
-gostrftime
-==========
+strftime
+========
 
-[![Build Status](https://github.com/cactus/gostrftime/workflows/unit-tests/badge.svg)][1]
-[![GoDoc](https://godoc.org/github.com/cactus/gostrftime?status.png)][2]
-[![Go Report Card](https://goreportcard.com/badge/cactus/gostrftime)](https://goreportcard.com/report/cactus/gostrftime)
-[![License](https://img.shields.io/github/license/cactus/gostrftime.svg)](https://github.com/cactus/gostrftime/blob/master/LICENSE.md)
+Fork of [github.com/cactus/gostrftime](https://github.com/cactus/gostrftime).
 
-## About
+## Usage
 
-A Go pkg for formatting time.Time in an strftime(3) like way.
-Basically, strftime for Go, with a couple of additions.
+```go
+import (
+	"fmt"
+	"time"
+	"github.com/caiguanhao/strftime"
+)
 
+func main() {
+	now := time.Now()
+	fmt.Println(strftime.Format("%Y-%m-%d", now))
+}
+```
 
-## Installing
-
-    $ go get github.com/cactus/gostrftime
-
-## Supported formats:
+## Format
 
 | code | example | Description |
 | ---- | ------- | --- |
@@ -56,26 +58,6 @@ Basically, strftime for Go, with a couple of additions.
 | `%Z` | `UTC` | time zone name |
 | `%z` | `-0700` | the time zone offset from UTC |
 
-
-## Using
-
-
-    import (
-        "fmt"
-        "time"
-        "github.com/cactus/gostrftime"
-    )
-
-    func main() {
-        now := time.Now()
-        fmt.Println(gostrftime.Format("%Y-%m-%d", now))
-    }
-
-
 ## License
 
-Released under an [ISC license][3]. See `LICENSE.md` file for details.
-
-[1]: https://github.com/cactus/gostrftime/actions
-[2]: https://godoc.org/github.com/cactus/gostrftime
-[3]: https://choosealicense.com/licenses/isc/
+Released under an ISC license. See `LICENSE.md` file for details.
